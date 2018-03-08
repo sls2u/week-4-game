@@ -10,14 +10,35 @@
 // The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
 // Option 1 Game design notes
 // The random number shown at the start of the game should be between 19 - 120.
-// Each crystal should have a random hidden value between 1 - 12.
+// Each crystal should have a random hidden value between 1 - 12
+
 
 
 //ready event
 $(document).ready(function() {
-   console.log("play!")
+   console.log("Let\'s Play!")
   });
 
-  var random= [];
-  var random = Math.floor(Math.random()*(120- 19) +1)
-  console.log(random)
+
+var random= []; {
+var random = Math.floor(Math.random()*(120- 19) +1)
+console.log(random)
+document.getElementById("box1").innerHTML = random;
+}
+
+var combinedNumber =[]; {
+if (combinedNumber ==== random)
+alert(You win!);
+
+}else if (combinedNumber >==random) {
+alert(You Lose!)
+
+}else (combinedNumber <== random) {
+  alert(Keep Guessing!)
+}
+}
+// when randomnumber = usernumber then victory
+//
+// user number > random numbeer trigger you lose
+  var crystal = new Object();
+      color: ['red', 'yellow', 'green', 'blue',];
