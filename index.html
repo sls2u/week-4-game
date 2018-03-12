@@ -5,7 +5,10 @@
     <title>jQuery</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   <body>
+
+
 
   <div class="gameContainer">
 
@@ -27,29 +30,44 @@
 
     <div class="trackingScore">
 
-        <div class="box1">
-            <span id="randomNumber"</span>
+        <div id="box1">Current Score:
+            <span id="randomNumber">0</span>
         </div>
 
 
         <div class="scoreBox">
-            <div id="win">Wins:</div>
-            <div id="lose">Losses:</div>
+            <div> Wins:
+                <span id="numberWins"></span>
+                <br>
+
+                Losses:
+                <span id="numberlosses"></span>
+            </div>
         </div>
 
         <div class="currentScoreValue">
-            <div id="addValue">Your current total is:
-                <span id="currentTotal">
+            <div>Your current total is:
+                <span id="currentTotal"></span>
             </div>
         </div>
 
     </div>
 
+    <br>
+
     <div class="crystalButtons">
-      <div id="red"<div>   </div>
-      <div id="blue"<div>  </div>
-      <div id="green"<div> </div>
-      <div id="yellow"<div> </div>
+      <img src="assets/images/ruby.jpg">
+      <img src="assets/images/sapphire.jpg">
+      <img src="assets/images/emerald.jpg">
+      <img src="assets/images/topaz.jpg">
+      <br>
+      <br>
+
+
+      <button id="btnRuby" value="10" class="gem">Ruby</button>
+      <button id="btnSapp" value="2" class="gem">Sapphire</button>
+      <button id="btnEmer" value="7" class="gem">Emerald</button>
+      <button id="btnTopa" value="1" class="gem">Topaz</button>
     </div>
 
 </div>
@@ -74,8 +92,8 @@
 
 
 
-
-  <script src="assets/javasript/game.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+  <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>
