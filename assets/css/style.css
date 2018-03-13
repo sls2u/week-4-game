@@ -2,3 +2,33 @@
 body {
   background-image: url("../images/background.jpg");
 }
+
+#box1 {
+  border: 3px solid black ;
+    width: 260px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.scoreBox {
+  border: 3px solid black;
+    width: 260px;
+    height: 50px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-weight: bold;
+
+}
+.currentScoreValue {
+  border: 3px solid black;
+    width: 260px;
+    height: 50px;
+    font-weight: bold;
+}
+
+.crystalButtons {
+  border: 3px solid black;
+  width: 260px;
+  height: 100px;
+  font-weight: bold;
+}
