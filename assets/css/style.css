@@ -8,6 +8,7 @@ body {
     width: 260px;
     height: 50px;
     font-weight: bold;
+    background-color: rgba(225,225,225,0.7);
 }
 
 .scoreBox {
@@ -17,6 +18,7 @@ body {
     margin-top: 2px;
     margin-bottom: 2px;
     font-weight: bold;
+    background-color: rgba(225,225,225,0.7);
 
 }
 .currentScoreValue {
@@ -24,6 +26,8 @@ body {
     width: 260px;
     height: 50px;
     font-weight: bold;
+    background-color: rgba(225,225,225,0.7);
+
 }
 
 .crystalButtons {
@@ -31,8 +35,12 @@ body {
   width: 260px;
   height: 100px;
   font-weight: bold;
+  
 }
 
  .instructions {
-       font-weight: bold;
+  font-weight: bold;
+  background-color: rgba(225,225,225,0.7);
+
+
 }
