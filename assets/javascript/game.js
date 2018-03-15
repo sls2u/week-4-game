@@ -3,59 +3,75 @@
 $(document).ready(function() {
   console.log("Let\'s Play!")
 
-    var random = Math.floor((Math.random() * 50) + 1); //get computer randomNumber
-    console.log(random)
-    $('#box1').text(random); //grab box 1 div in html and replace randomNumber in that div in html
+var random = Math.floor((Math.random() * 101) + 19); //get computer randomNumber
+console.log(random)
 
-    //store current wins and losses when the page refreshes to a new game
-    $(window).load(function() {
-      $('#numberWins').text(window.localStorage.getItem('wins')); //calling global variable
-        $('#numberlosses').text(window.localStorage.getItem('losses'));
-    });
+$('#box1').text(random);
+// appending random number to the box1 id in the html doc
 
   //global variables
-  var currentScoreValue = 0;
-  var currentNumb = 0;
-  var losses = window.localStorage.getItem('losses') || 0; //calling losses and wins or setting it to 0
-  var wins = window.localStorage.getItem('wins') || 0;
+  var btnRuby= Math.floor((Math.random() * 11) + 1);
+  var btnSapp= Math.floor((Math.random() * 11) + 1);
+  var btnEmer= Math.floor((Math.random() * 11) + 1);
+  var btnTopa= Math.floor((Math.random() * 11) + 1);
+  //setting up randomNumber for each jewel 1-12
 
-  //find gem class in html to click and parsing integer of the value attribute of whatever "this" button is clicked
-  $('.gem').click(function() {
-    currentNumb += parseInt($(this).attr("value"));
-    console.log(currentNumb)
-    $("#currentTotal").text(currentNumb); //finding current total in html and replacing current number on screen
+  var currentScoreValue = 0;
+  var losses = 0;
+  var wins = 0;
+  //declare variables for scorekeeping
+
+  $('numberWins').text(wins);
+  $('numberlosses').text(losses);
+
+  function resetPage() {
+    var random = Math.floor((Math.random() * 101) + 19);
+    console.log(random);
+     btnRuby= Math.floor((Math.random() * 11) + 1);
+     btnSapp= Math.floor((Math.random() * 11) + 1);
+     btnEmer= Math.floor((Math.random() * 11) + 1);
+     btnTopa= Math.floor((Math.random() * 11) + 1);
+    currentScoreValue = 0;
+    $('#currentTotal').text(currentScoreValue);
+  };
+
+    var btn1Ruby = document.getElementById('btnRuby');
+    var btn2Sapp = document.getElementById('btnSapp');
+    var btn4Topa = document.getElementById('btnTopa');
+    var btn3Emer = document.getElementById('btnEmer');
+
+
+  $('.gem').click(function(){// something is messed up here
+    btnRuby;
+    btnSapp;
+    btnEmer;
+    btnTopa;
+    currentScoreValue = currentScoreValue + currentTotal;
+    $('#currentTotal').text(currentScoreValue);
 
     //if conditionals
-    if (currentNumb === random) {
+    if (currentScoreValue === random) {
       alert("You Win!")
       scoreWin(); //calling score fucntion already created
-      return(currentNumb)
+      return(currentScoreValue)
+      resetPage();
 
 
-    } else if (currentNumb > random) {
+    } else if (currentScoreValue > random) {
       alert("You Lost!")
       scoreLose();
-      return(currentNumb)
-
-
-    }
-    //creating score function so it can be called.  adding 1 to wins and losses to keep track in html
-    function scoreWin() {
-      wins++;
-      window.localStorage.setItem('wins', wins);//storing wins in 'localStorage'aka google webpage
-      $('#numberWins').text(window.localStorage.getItem('wins'));
-    }
-
-    function scoreLose() {
-      losses++;
-      window.localStorage.setItem('losses', losses);
-      $('#numberlosses').text(window.localStorage.getItem('losses'));
-
-    }
-
-
-
-
-
-  });
+      return(currenScoreValue)
+      resetPage();
+}
 });
+});
+
+function scoreWin() {
+  wins++;
+  $('#numberWins').text(wins);
+}
+
+function scoreLose() {
+  losses++;
+  $('#numberlosses').text(losses);
+}
